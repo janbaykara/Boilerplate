@@ -1,0 +1,33 @@
+/* ---------- ==========================================
+  TYPOGRAPHY
+*/
+
+.body-text() {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+* {
+  .body-text;
+  line-height: 1em !important;
+  letter-spacing: normal !important;
+  text-transform: uppercase;
+}
+
+.fPrimary {
+  .body-text;
+  line-height: 1.35em;
+  letter-spacing: -0.005em;
+}
+
+* {
+  .fPrimary;
+  .user-select(darken(@cspot,10%));
+  .prevent-text-breakouts;
+}
+
+h1,h2,h3,h4,h5 {
+  &, & * {
+    line-height: 1em;
+    letter-spacing: -0.05em;
+  }
+}

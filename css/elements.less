@@ -1,0 +1,42 @@
+/* ---------- ==========================================
+  PAGE ELEMENTS - Colour, embellishment, styling  */
+
+// Colour scheme      //Alt red
+@cspot: #000;      //@cspot: #33bdc9; 
+@cprime: #333;        //@cprime: #333;   
+@ctxt: #666;       //@ctxt: #f5f5f5;  
+@cbg: #fff;        //@cbg: #c93333;   TEXT-SHADOW: 2PX 2PX 0PX RGBA(120,0,0,0.3);
+
+// For type
+@clink: @cspot;
+@clinkhover: lighten(@clink,10%);
+@clinkactive: lighten(@clink,20%);
+@clinkvisited: @clink;
+
+/* ================== GLOBAL MODULAR */
+
+* {
+  .transition(0.25s);
+  color: @ctxt;
+}
+
+a {
+  color: @clink;
+  text-decoration: none;
+  font-weight: 600;
+  
+  &:hover     { color: @clinkhover;   border-bottom: 2px solid @clink; }
+  &:active    { color: @clinkactive;  border-bottom: 2px solid @clink; }
+  &:visited   { color: @clinkvisited; }
+}
+
+.selection-style(@cprime, @cbg);
+
+/* ================== GLOBAL SINGULAR */
+
+html {
+  background: @cbg;
+}
+
+/* Section titles
+========================= */
