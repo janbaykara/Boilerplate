@@ -4,10 +4,10 @@
 # ======================
 
 // Strings
-$PUBLISHER      = "Boom";
-$PROJECTNAME    = "Boilerplate";
+$PUBLISHER      = "...";
+$PROJECTNAME    = "...";
 $PAGETITLE      = $PROJECTNAME;
-$DESCRIPTION    = "I'm Jan Baykara, a graphic and web designer & developer based in Leicestershire. This is where I keep my portfolio of work for clients and personal projects. Quirky personal fact here. Something something use the word awesome. There, now I'm a qualified for the creative industries, right?";
+$DESCRIPTION    = "...";
 $COPYRIGHT      = $PUBLISHER." &copy; ".date("Y");
 
 // URLs
@@ -21,9 +21,11 @@ $LOGO           = $IMGURL."/logo.png";
 
 // Miscellaneous
 $SCHEMAROOT     = "WebPage";
+$ANALYTICSCODE  = ;
+$ANALYTICSBASEURL=;
 
 // Enable/Disable LESS
-$LESS = false;
+$LESS = true;
 
 if($LESS == true) {
   $CSS = ' 
@@ -106,7 +108,6 @@ $SCAFFOLD_HEAD = <<<HTML
     
         <script src="//cdn.jsdelivr.net/modernizr/2.8.2/modernizr.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
 </head>
 <body>
     <!-- ===============
@@ -129,7 +130,7 @@ $SCAFFOLD_FOOT = <<<HTML
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-47411407-1', 'baykara.co.uk');
+      ga('create', '$ANALYTICSCODE', '$ANALYTICSBASEURL');
       ga('send', 'pageview');
 
     </script>
